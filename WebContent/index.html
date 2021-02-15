@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+		<meta charset="UTF-8">
+		<title>PS5</title>
+	</head>
+
+	<body>
+		<script>
+/* 			function circle() {
+				  createCanvas(400, 400);
+				  background('gray');
+				  circle(0,0,20);
+				  circle(100,0,20);
+				  circle(0,100,20);
+				  circle(100,100,20);
+			}
+			function setup() {
+				  createCanvas(400, 400);
+				  background('gray');
+				  point(100,100);
+				  rect(100,100,100);
+			}
+*/
+			
+/* 			function setup() {
+				  createCanvas(400, 400);
+				  stroke('blue')
+				  strokeWeight(10);
+				  background('gray');
+				  fill('red');
+				  rect(100, 100, 100);
+				  circle(100,200,100);
+				  noFill();
+				  rect(100,200,100);
+			}
+ */
+ /* random을 사용한 원 생성 
+			function setup() {
+				  createCanvas(400, 400);
+				  background(255, 140, 0);
+			}
+			function draw(){
+				  // console.log(random(400));
+				  fill(random(200), random(100), random(500))
+				  circle(random(400), random(400), random(400));			  
+			}
+			
+ */		
+/*  움직이게 하는 방법
+			function setup() {
+				createCanvas(windowWidth, windowHeight );
+				x = 0;
+  				y = 0;
+			}
+			function draw(){
+				  background(255, 140, 0);
+				  x = x + 10;
+				  y = y + 10;
+				  circle(x, y, 100);
+				  
+			}
+ */ 
+			
+/* 	마우스 움직임에 따라 그림 생성
+			function setup() {
+				  createCanvas(windowWidth, windowHeight );
+				  background(220);
+			}
+			function draw(){
+			  	  circle(mouseX+random(-10, 10), mouseY+random(-10,10), random(20));
+			  
+		    }
+
+			
+  */
+/*   p5.js 10 - 상호작용
+		  function setup() {
+				  createCanvas(windowWidth, windowHeight );
+				  background(220);
+			}
+			function draw(){
+				  console.log('mouseIsPressed', mouseIsPressed);
+				  // 만약에 mouseIsPRessed 값이 True라면 배경색을 설정한다.
+				  // if(mouseIsPressed){
+				  //   background(random(255), random(255), random(255));  
+				  // }
+				  circle(mouseX+random(-10, 10), mouseY+random(-10,10), random(20));
+			  
+			}
+			function mousePressed(){
+			   		background(random(250), random(255), random(255));  
+			} */ 
+			function setup() {
+				  createCanvas(windowWidth, windowHeight);
+				  background(220);
+				}
+				function draw(){
+				  //마우스 속도에 따라 원 크기가 달라짐
+				  //빠를수록 원이 커짐
+				  px = pow(mouseX-pmouseX, 2)
+				  py = pow(mouseY-pmouseY, 2)
+				  speed = sqrt(px+py);
+				  circle(mouseX, mouseY, speed); 
+				}
+
+				function mousePressed() {
+				  background(random(250), random(255), random(255));
+				}			
+</script>
+	</body>
+</html>
