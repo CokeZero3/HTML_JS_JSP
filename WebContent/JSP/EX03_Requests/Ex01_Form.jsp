@@ -22,7 +22,6 @@
 	 	<input type="checkbox" name="game" value="Maple Story">메이플 스토리
 	 	<br/>
 	 	<input type="submit" value="입력하기">
-
 </form>
 
 </body>

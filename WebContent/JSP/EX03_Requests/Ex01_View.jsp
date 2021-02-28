@@ -1,3 +1,4 @@
+<%@page import="java.util.Enumeration"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%
@@ -48,7 +49,17 @@
 	}
 %>
 <hr/>
-
+<%
+	String [] lst = {"이름", "주소", "게임"};
+	int i = 0;
+	Enumeration<String> paramEnum = request.getParameterNames();
+	while(paramEnum.hasMoreElements()){
+		String element = paramEnum.nextElement();
+%>
+	<%=lst[i++]+" : "+getData(request, element) %><br/>
+<%
+	}
+%>
 
 
 
