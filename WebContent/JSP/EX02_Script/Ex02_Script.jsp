@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%
+    int sum = 0;
+	for(int i=1; i<=10; i++)
+		sum += i;
+	
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,17 +13,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<%
-	for(int i=0; i<10;i++){
-		//out.println(i);
-		out.println(i+"<br/>");
-	
-%>
-<br/>
-<%
-	}
-%>
-
+	<h1>sum <%=sum %></h1>
+	<input type="text" name="sum" value="10">
+	<input type="text" name="sum" value="<%=sum%>"><br/>
+	2+3 = <%=2+3 %>
 </body>
 </html>
