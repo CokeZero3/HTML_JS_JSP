@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-</head>
-<body>
+<center>
+	Categories:
+	<ul>
+		<li>글쓰기</li>
+		<li>글보기</li>
+		<li>빠셍</li>
+	</ul>
 
-</body>
-</html>
+</center>
