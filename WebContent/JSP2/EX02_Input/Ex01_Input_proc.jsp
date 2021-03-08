@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-</head>
-<body>
+<%
+	request.setCharacterEncoding("EUC-KR");
+	String data = request.getParameter("data");
+	
+	if("".contentEquals(data))
+		request.setAttribute("data", "Empty!");
 
-</body>
-</html>
+%>
+<title>Input Process</title>
+<jsp:forward page="Ex01_to.jsp"/>
